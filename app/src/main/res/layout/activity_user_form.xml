@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserForm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+   <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+    android:id= "@+id/STA_NAME"
+       app:smsp_enableSearchHeader="false"
+       app:smsp_hint="    Select STA Name/RTA Name/......"
+       app:smsp_hintColor="#1165C1"
+      android:layout_width="match_parent"
+       app:smsp_hintSize = "20dp"
+       app:smsp_isSearchable="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/edittext_background"
+    android:layout_height="60dp"
+    android:layout_marginTop = "40dp" />
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id= "@+id/district"
+        app:smsp_hint="     Select District"
+        app:smsp_hintColor="#1165C1"
+        app:smsp_hintSize = "20dp"
+        app:smsp_isSearchable="true"
+        app:smsp_enableSearchHeader="false"
+        android:layout_below="@id/STA_NAME"
+        android:background="@drawable/edittext_background"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop = "15dp" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/route_name"
+        android:layout_below="@id/district"
+        android:hint="     Name of Route"
+        android:textColor="@color/colorTextFirst"
+        android:layout_height="60dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop = "15dp"/>
+
+    <TextView
+        android:id="@+id/route_type"
+        android:layout_width="371dp"
+        android:layout_below="@id/route_name"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Types of Route"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/route"
+        android:layout_below="@+id/route_type"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/nationalize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_background"
+            android:text="Nationalize"
+            android:paddingTop="20dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="15dp"
+            android:gravity="center_horizontal" />
+        <Button
+            android:background="@drawable/edittext_background"
+            android:id="@+id/non_nationalize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Non-Nationalize"
+            android:textColor="@color/blue"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:gravity="center_horizontal" />
+        <Button
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:paddingTop="20dp"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/routed_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/route"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Types of Road"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/road_type"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/routed_type"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/NH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="NH"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/SH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="SH"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/MDR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="MDR"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/ODR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="ODR"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/express_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="@color/blue"
+            android:text="Express way"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/road_type"
+        android:layout_width="match_parent"
+        android:id="@+id/source_des"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="10dp"
+            android:gravity="start|center_vertical"
+            android:text="   Source"
+            android:drawableLeft="@drawable/ic_location"
+            android:layout_marginTop="15dp"
+            android:textAlignment="gravity"
+            android:textColor="@color/blue"
+            android:background="@drawable/edittext_background"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="    Via"
+            android:textAlignment="gravity"
+            android:paddingLeft="10dp"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/ic_location"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="start|center_vertical"
+            android:id="@+id/destination"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_location"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_background"
+            android:text="   Destination"
+            android:textColor="@color/blue"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/source_des"
+           android:orientation="vertical">
+
+           <Button
+               android:id="@+id/mark_route"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/buttoncolor"
+               android:gravity="center_horizontal"
+               android:text="Mark Route"
+               android:textAlignment="center"
+               android:textColor="@color/blue"
+               android:textSize="20dp" />
+
+           <Button
+               android:id="@+id/Save"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/buttoncolor"
+               android:gravity="center_horizontal"
+               android:text="Save"
+               android:textAlignment="center"
+               android:textColor="@color/blue"
+               android:textSize="20dp" />
+
+           <TextView
+               android:id="@+id/type_of_road"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp"
+               android:hint="type of road"
+               android:visibility="gone"
+               tools:ignore="MissingConstraints" />
+
+
+           <TextView
+               android:id="@+id/latlong1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp"
+               android:hint="latLong value here"
+               android:visibility="gone"
+               tools:ignore="MissingConstraints" />
+           <TextView
+               android:id="@+id/geom"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp"
+               android:hint="geom value here"
+               android:visibility="gone"
+               tools:ignore="MissingConstraints" />
+
+           <TextView
+               android:id="@+id/type_of_route"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp"
+               android:hint="type of route"
+               android:visibility="gone"
+               tools:ignore="MissingConstraints" />
+
+
+       </LinearLayout>
+   </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

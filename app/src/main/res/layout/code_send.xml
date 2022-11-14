@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".CodeSend">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation = "vertical">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop ="150dp"
+         android:text = "Login to your account"
+         android:gravity = "center"
+         android:textColor= "@color/colorTextFirst"
+         android:textSize = "30sp"
+         android:textStyle = "bold"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop ="10dp"
+            android:layout_marginStart = "60dp"
+            android:layout_marginEnd = "60dp"
+            android:background="@drawable/backgroundbox"
+            android:gravity = "center"
+            android:orientation = "horizontal">
+            <EditText
+                android:id ="@+id/enter_number"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingTop="10dp"
+                android:hint= "Enter User Name"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:imeOptions="actionDone"
+                android:importantForAutofill= "no"
+                android:inputType="text"
+                android:textColor="@color/colorTextFirst"
+                android:textSize = "16sp"
+                android:textStyle = "bold"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop ="10dp"
+            android:layout_marginStart = "60dp"
+            android:layout_marginEnd = "60dp"
+            android:background="@drawable/backgroundbox"
+            android:gravity = "center"
+            android:orientation = "horizontal">
+            <EditText
+                android:id ="@+id/enter_password"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingTop="10dp"
+                android:hint= "Enter Password"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:importantForAutofill= "no"
+                android:inputType="numberPassword"
+                android:textColor="@color/colorTextFirst"
+                android:textSize = "16sp"
+                android:textStyle = "bold"/>
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:gravity = "center"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/buttonOtp"
+                android:text= "Login"
+                android:textSize="20dp"
+                android:gravity = "center"
+                android:background= "@drawable/backgrounbutton"
+                android:layout_margin = "30dp"
+                android:textColor="@color/colorTextFirst"
+                android:textStyle = "bold"/>
+
+            <ProgressBar
+                android:id = "@+id/sending_otp"
+                android:layout_margin = "30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity = "center"
+                android:visibility="gone"/>
+
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
